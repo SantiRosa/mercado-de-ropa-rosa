@@ -1,0 +1,220 @@
+.maindos{
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-template-areas: 
+    "coleccion coleccion coleccion coleccion"
+    "remeras remeras remeras remeras"
+    "remerauno remerados remeratres remeracuatro"
+    "buzos buzos buzos buzos"
+    "buzouno buzodos buzotres buzocuatro"
+    "pantalones pantalones pantalones pantalones"
+    "pantalonuno pantalondos pantalontres pantaloncuatro";
+    background-image: $color-de-nav;
+    padding: 40px;
+    .coleccion{
+    grid-area: coleccion;
+    @include propiedades(center, bold, cursive, rgb(71, 15, 122));
+    }
+    .h2{
+        font-size: $h2;
+    }
+    .h3{
+        font-size: $h3;
+    }
+    .remeras{
+    grid-area: remeras;
+    padding: 15px;
+    color: rgb(71, 15, 122);
+    font-weight: bold;
+    }
+    .remerauno{
+    grid-area: remerauno;
+    transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);
+        }
+        p{
+        text-align: center;      
+        }
+        img{
+        margin: 10px 10px 10px 10px;
+        }
+    }
+    .remerados{
+    grid-area: remerados;
+    transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);
+        }
+        p{
+        text-align: center;  
+        }
+        img{
+        margin: 10px 10px 10px 10px; 
+        }
+    }
+    .remeratres{
+        grid-area: remeratres;
+        transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);
+        }
+        p{
+        text-align: center;
+        }
+        img{
+        margin: 10px 10px 10px 10px;   
+        }
+    }
+    .remeracuatro{
+        grid-area: remeracuatro;
+        transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);  
+        }
+        p{
+        text-align: center;   
+        }
+        img{
+        margin: 10px 10px 10px 10px;
+        }
+    }
+    .buzos{
+        grid-area: buzos;
+        margin-top: 15px;
+        font-size: 20px;
+        padding: 15px;
+        color: rgb(71, 15, 122);
+    }
+    .buzouno{
+        grid-area: buzouno;
+        transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);
+        }
+        p{
+        text-align: center;   
+        }
+        img{
+        margin: 10px 10px 10px 10px;
+        }
+    }
+    .buzodos{
+        grid-area: buzodos;
+        transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);
+        }
+        p{
+        text-align: center;  
+        }
+        img{
+        margin: 10px 10px 10px 10px;
+        }
+    }
+    .buzotres{
+        grid-area: buzotres;
+        transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);
+        }
+        p{
+        text-align: center;
+        }
+        img{
+        margin: 10px 10px 10px 10px;
+        }
+    }
+    .buzocuatro{
+        grid-area: buzocuatro;
+        transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);
+        }
+        p{
+        text-align: center;
+        }
+        img{
+        margin: 10px 10px 10px 10px;
+        }
+    }
+    .pantalones{
+        grid-area: pantalones;
+        margin-top: 15px;
+        font-size: 20px;
+        padding: 15px;
+        color: rgb(71, 15, 122);
+    }
+    .pantalonuno{
+        grid-area: pantalonuno;
+        transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);
+        }
+        p{
+        text-align: center;
+        }
+        img{
+        margin: 10px 10px 10px 10px;
+        }
+    }
+    .pantalondos{
+        grid-area: pantalondos;
+        transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);
+        }
+        p{
+        text-align: center;
+        }
+        img{
+        margin: 10px 10px 10px 10px;
+        }
+    }
+    .pantalontres{
+        grid-area: pantalontres;
+        transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);
+        }
+        p{
+        text-align: center;
+        }
+        img{
+        margin: 10px 10px 10px 10px;
+        }
+    }
+    .pantaloncuatro{
+        grid-area: pantaloncuatro;
+        transition: .5s ease 0.05s;
+        &:hover{
+        transform: scale(1.3);
+        }
+        p{
+        text-align: center;
+        }
+        img{
+        margin: 10px 10px 10px 10px;
+        }
+    }
+    .whasap{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        animation-name: whasaptitila;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        text-align: center;
+        @keyframes whasaptitila{
+            50% { opacity: 0.0; }
+            100% { opacity: 1.0; }
+        }
+        .toast-body{
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}

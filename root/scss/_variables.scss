@@ -1,0 +1,23 @@
+$color-de-nav: radial-gradient(circle at 49.96% 49.91%, #02ffff 0, #34f5ff 16.67%, #47d3f3 33.33%, #50afcc 50%, #518ca4 66.67%, #4d6f80 83.33%, #455661 100%);
+$titulos: (
+    h2: 40px,
+    h3: 30px,
+);
+$h2: map-get($titulos, h2);
+$h3: map-get($titulos, h3);
+@mixin propiedades ($text-align, $font-weight, $font-family, $color) {
+    text-align: $text-align;
+    font-weight: $font-weight;
+    font-family: $font-family;
+    color: $color;
+}
+.boton{
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}

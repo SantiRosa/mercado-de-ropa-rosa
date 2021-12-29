@@ -1,0 +1,44 @@
+header{
+    @extend .boton;
+    .imagenLogo{
+        display: inline-block;
+        }
+    h1{
+    display: inline-block;
+        }
+    nav{
+        .titulo{
+            text-align: start;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       
+        }
+        ul{
+            li{
+            display: inline-block;
+            margin: 5px;
+            padding: none;
+            text-align: center;
+                a{
+                border-radius: 3px;
+                text-transform: uppercase;
+                border: solid;
+                text-decoration: none;
+                    &:hover{
+                    background-color:salmon;
+                    transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+    
+
+
+      
+
+                
+
+
+

@@ -1,0 +1,90 @@
+.maintres{
+    display: grid;
+    grid-template-areas: 
+    "encontranos  encontranos encontranos"
+    "ubicacion ubicacionc ubicacionb";
+    grid-gap: 3px;
+    background-image: radial-gradient(circle at 49.96% 49.91%, #02ffff 0, #34f5ff 16.67%, #47d3f3 33.33%, #50afcc 50%, #518ca4 66.67%, #4d6f80 83.33%, #455661 100%);
+    padding: 40px;
+    h2{
+        grid-area: encontranos;
+        font-size: $h2;
+        @include propiedades(center, bold, cursive, rgb(71, 15, 122))
+    }
+    .ubicacion{
+        grid-area: ubicacion;
+        height: 20rem;
+        .mapaa{
+        display: grid;
+        grid-area: 
+        "mapaa mapaa";
+        flex-direction: column;
+        justify-content: center;
+            p{
+                margin: 10px 0px 10px 10px; 
+            }
+        }
+        iframe{
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 15px;
+        }
+    }
+    .ubicacionb{
+        grid-area: ubicacionb;
+        height: 20rem;
+        .mapab{
+        display: grid;
+        grid-area: 
+        "mapab mapab";
+        flex-direction: column;
+        justify-content: center;
+            p{
+                margin: 10px 0px 10px 10px; 
+            }
+        }
+        iframe{
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 15px;  
+        }
+    }
+    .ubicacionc{
+        grid-area: ubicacionc;
+        height: 20rem;
+        .mapac{
+        display: grid;
+        grid-area: 
+        "mapac mapac";
+        flex-direction: column;
+        justify-content: center;
+            p{
+                margin: 10px 10px 10px 10px;
+            }
+        }
+        iframe{
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 15px;
+        }
+    }
+    .whasap{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        animation-name: whasaptitila;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        text-align: center;
+        @keyframes whasaptitila{
+            50% { opacity: 0.0; }
+            100% { opacity: 1.0; }
+        }
+        .toast-body{
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}
