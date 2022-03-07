@@ -155,7 +155,13 @@ footer {
   justify-items: center;
   align-items: center;
   display: grid;
-  grid-template-areas: "coleccion coleccion coleccion coleccion" "remeras remeras remeras remeras" "remerauno remerados remeratres remeracuatro" "buzos buzos buzos buzos" "buzouno buzodos buzotres buzocuatro" "pantalones pantalones pantalones pantalones" "pantalonuno pantalondos pantalontres pantaloncuatro";
+  grid-template-areas: "coleccion coleccion coleccion coleccion"
+ "remeras remeras remeras remeras"
+ "remerauno remerados remeratres remeracuatro"
+ "buzos buzos buzos buzos"
+ "buzouno buzodos buzotres buzocuatro"
+ "pantalones pantalones pantalones pantalones"
+ "pantalonuno pantalondos pantalontres pantaloncuatro";
   background-image: radial-gradient(circle at 49.96% 49.91%, #02ffff 0, #34f5ff 16.67%, #47d3f3 33.33%, #50afcc 50%, #518ca4 66.67%, #4d6f80 83.33%, #455661 100%);
   padding: 40px; }
   .maindos .coleccion {
@@ -315,7 +321,8 @@ footer {
 
 .maintres {
   display: grid;
-  grid-template-areas: "encontranos  encontranos encontranos" "ubicacion ubicacionc ubicacionb";
+  grid-template-areas: "encontranos  encontranos encontranos"
+ "ubicacion ubicacionc ubicacionb";
   grid-gap: 3px;
   background-image: radial-gradient(circle at 49.96% 49.91%, #02ffff 0, #34f5ff 16.67%, #47d3f3 33.33%, #50afcc 50%, #518ca4 66.67%, #4d6f80 83.33%, #455661 100%);
   padding: 40px; }
