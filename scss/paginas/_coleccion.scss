@@ -1,84 +1,109 @@
 .maindos{
-    justify-items: center;
-    align-items: center;
-    display: grid;
-    grid-template-areas: 
-    "coleccion coleccion coleccion coleccion"
-    "remeras remeras remeras remeras"
-    "remerauno remerados remeratres remeracuatro"
-    "buzos buzos buzos buzos"
-    "buzouno buzodos buzotres buzocuatro"
-    "pantalones pantalones pantalones pantalones"
-    "pantalonuno pantalondos pantalontres pantaloncuatro";
-    background-image: $color-de-nav;
-    padding: 40px;
+    // justify-items: center;
+    // align-items: center;
+    // display: grid;
+    // grid-template-areas: 
+    // "coleccion coleccion coleccion coleccion"
+    // "remeras remeras remeras remeras"
+    // "remerauno remerados remeratres remeracuatro"
+    // "buzos buzos buzos buzos"
+    // "buzouno buzodos buzotres buzocuatro"
+    // "pantalones pantalones pantalones pantalones"
+    // "pantalonuno pantalondos pantalontres pantaloncuatro";
+    // background-image: $color-de-nav;
+    // padding: 40px;
     .coleccion{
-    grid-area: coleccion;
-    @include propiedades(center, bold, cursive, rgb(71, 15, 122));
+    // grid-area: coleccion;
+        @include propiedades(center, bold, cursive, rgb(71, 15, 122));
     }
     .h2{
+        @include propiedades(center, bold, cursive, rgb(71, 15, 122));
+    }
         font-size: $h2;
     }
     .h3{
         font-size: $h3;
     }
     .remeras{
-    grid-area: remeras;
-    padding: 15px;
-    color: rgb(71, 15, 122);
-    font-weight: bold;
+    // grid-area: remeras;
+        @include propiedades(center, bold, cursive, rgb(71, 15, 122));
+        padding: 15px;
+    // padding: 15px;
+    // color: rgb(71, 15, 122);
+    // font-weight: bold;
     }
     .remerauno{
-    grid-area: remerauno;
+    // grid-area: remerauno;
+    // z-index: 1;
     transition: .5s ease 0.05s;
         &:hover{
         transform: scale(1.3);
         }
+        h5{
+            font-size: $h5;
+            text-align: center;
+        }
         p{
-        text-align: center;      
+        text-align: center;
+        font-size:25px;      
         }
-        img{
-        margin: 10px 10px 10px 10px;
-        }
+        // img{
+        // margin: 0px;
+        // }
     }
     .remerados{
-    grid-area: remerados;
+    // grid-area: remerados;
     transition: .5s ease 0.05s;
         &:hover{
         transform: scale(1.3);
         }
+        h5{
+            font-size: $h5;
+            text-align: center;
+        }
         p{
-        text-align: center;  
+        text-align: center;
+        font-size:25px;      
         }
-        img{
-        margin: 10px 10px 10px 10px; 
-        }
+        // img{
+        // margin: 10px 10px 10px 10px; 
+        // }
     }
     .remeratres{
-        grid-area: remeratres;
+        // grid-area: remeratres;
         transition: .5s ease 0.05s;
         &:hover{
         transform: scale(1.3);
         }
+        h5{
+            font-size: $h5;
+            text-align: center;
+        }
         p{
         text-align: center;
+        font-size:25px;
         }
-        img{
-        margin: 10px 10px 10px 10px;   
-        }
+        // img{
+        // margin: 10px 10px 10px 10px;   
+        // }
     }
     .remeracuatro{
-        grid-area: remeracuatro;
+        // grid-area: remeracuatro;
         transition: .5s ease 0.05s;
         &:hover{
         transform: scale(1.3);  
         }
+        h5{
+            font-size: $h5;
+            text-align: center;
+        }
         p{
         text-align: center;   
+        font-size:25px;
         }
-        img{
-        margin: 10px 10px 10px 10px;
-        }
+        // img{
+        // margin: 10px 10px 10px 10px;
+        // }
     }
     .buzos{
         grid-area: buzos;
@@ -217,4 +242,4 @@
             text-decoration: none;
         }
     }
-}
+// }

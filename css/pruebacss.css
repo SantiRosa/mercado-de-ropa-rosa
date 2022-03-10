@@ -152,166 +152,185 @@ footer {
       text-decoration: none; }
 
 .maindos {
-  justify-items: center;
-  align-items: center;
-  display: grid;
-  grid-template-areas: "coleccion coleccion coleccion coleccion" "remeras remeras remeras remeras" "remerauno remerados remeratres remeracuatro" "buzos buzos buzos buzos" "buzouno buzodos buzotres buzocuatro" "pantalones pantalones pantalones pantalones" "pantalonuno pantalondos pantalontres pantaloncuatro";
-  background-image: radial-gradient(circle at 49.96% 49.91%, #02ffff 0, #34f5ff 16.67%, #47d3f3 33.33%, #50afcc 50%, #518ca4 66.67%, #4d6f80 83.33%, #455661 100%);
-  padding: 40px; }
+  font-size: 40px; }
   .maindos .coleccion {
-    grid-area: coleccion;
     text-align: center;
     font-weight: bold;
     font-family: cursive;
     color: #470f7a; }
   .maindos .h2 {
-    font-size: 40px; }
-  .maindos .h3 {
-    font-size: 30px; }
-  .maindos .remeras {
-    grid-area: remeras;
-    padding: 15px;
-    color: #470f7a;
-    font-weight: bold; }
-  .maindos .remerauno {
-    grid-area: remerauno;
-    transition: .5s ease 0.05s; }
-    .maindos .remerauno:hover {
-      transform: scale(1.3); }
-    .maindos .remerauno p {
-      text-align: center; }
-    .maindos .remerauno img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .remerados {
-    grid-area: remerados;
-    transition: .5s ease 0.05s; }
-    .maindos .remerados:hover {
-      transform: scale(1.3); }
-    .maindos .remerados p {
-      text-align: center; }
-    .maindos .remerados img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .remeratres {
-    grid-area: remeratres;
-    transition: .5s ease 0.05s; }
-    .maindos .remeratres:hover {
-      transform: scale(1.3); }
-    .maindos .remeratres p {
-      text-align: center; }
-    .maindos .remeratres img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .remeracuatro {
-    grid-area: remeracuatro;
-    transition: .5s ease 0.05s; }
-    .maindos .remeracuatro:hover {
-      transform: scale(1.3); }
-    .maindos .remeracuatro p {
-      text-align: center; }
-    .maindos .remeracuatro img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .buzos {
-    grid-area: buzos;
-    margin-top: 15px;
-    font-size: 20px;
-    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-family: cursive;
     color: #470f7a; }
-  .maindos .buzouno {
-    grid-area: buzouno;
-    transition: .5s ease 0.05s; }
-    .maindos .buzouno:hover {
-      transform: scale(1.3); }
-    .maindos .buzouno p {
-      text-align: center; }
-    .maindos .buzouno img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .buzodos {
-    grid-area: buzodos;
-    transition: .5s ease 0.05s; }
-    .maindos .buzodos:hover {
-      transform: scale(1.3); }
-    .maindos .buzodos p {
-      text-align: center; }
-    .maindos .buzodos img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .buzotres {
-    grid-area: buzotres;
-    transition: .5s ease 0.05s; }
-    .maindos .buzotres:hover {
-      transform: scale(1.3); }
-    .maindos .buzotres p {
-      text-align: center; }
-    .maindos .buzotres img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .buzocuatro {
-    grid-area: buzocuatro;
-    transition: .5s ease 0.05s; }
-    .maindos .buzocuatro:hover {
-      transform: scale(1.3); }
-    .maindos .buzocuatro p {
-      text-align: center; }
-    .maindos .buzocuatro img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .pantalones {
-    grid-area: pantalones;
-    margin-top: 15px;
+
+.h3 {
+  font-size: 30px; }
+
+.remeras {
+  text-align: center;
+  font-weight: bold;
+  font-family: cursive;
+  color: #470f7a;
+  padding: 15px; }
+
+.remerauno {
+  transition: .5s ease 0.05s; }
+  .remerauno:hover {
+    transform: scale(1.3); }
+  .remerauno h5 {
     font-size: 20px;
-    padding: 15px;
-    color: #470f7a; }
-  .maindos .pantalonuno {
-    grid-area: pantalonuno;
-    transition: .5s ease 0.05s; }
-    .maindos .pantalonuno:hover {
-      transform: scale(1.3); }
-    .maindos .pantalonuno p {
-      text-align: center; }
-    .maindos .pantalonuno img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .pantalondos {
-    grid-area: pantalondos;
-    transition: .5s ease 0.05s; }
-    .maindos .pantalondos:hover {
-      transform: scale(1.3); }
-    .maindos .pantalondos p {
-      text-align: center; }
-    .maindos .pantalondos img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .pantalontres {
-    grid-area: pantalontres;
-    transition: .5s ease 0.05s; }
-    .maindos .pantalontres:hover {
-      transform: scale(1.3); }
-    .maindos .pantalontres p {
-      text-align: center; }
-    .maindos .pantalontres img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .pantaloncuatro {
-    grid-area: pantaloncuatro;
-    transition: .5s ease 0.05s; }
-    .maindos .pantaloncuatro:hover {
-      transform: scale(1.3); }
-    .maindos .pantaloncuatro p {
-      text-align: center; }
-    .maindos .pantaloncuatro img {
-      margin: 10px 10px 10px 10px; }
-  .maindos .whasap {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    animation-name: whasaptitila;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     text-align: center; }
+  .remerauno p {
+    text-align: center;
+    font-size: 25px; }
+
+.remerados {
+  transition: .5s ease 0.05s; }
+  .remerados:hover {
+    transform: scale(1.3); }
+  .remerados h5 {
+    font-size: 20px;
+    text-align: center; }
+  .remerados p {
+    text-align: center;
+    font-size: 25px; }
+
+.remeratres {
+  transition: .5s ease 0.05s; }
+  .remeratres:hover {
+    transform: scale(1.3); }
+  .remeratres h5 {
+    font-size: 20px;
+    text-align: center; }
+  .remeratres p {
+    text-align: center;
+    font-size: 25px; }
+
+.remeracuatro {
+  transition: .5s ease 0.05s; }
+  .remeracuatro:hover {
+    transform: scale(1.3); }
+  .remeracuatro h5 {
+    font-size: 20px;
+    text-align: center; }
+  .remeracuatro p {
+    text-align: center;
+    font-size: 25px; }
+
+.buzos {
+  grid-area: buzos;
+  margin-top: 15px;
+  font-size: 20px;
+  padding: 15px;
+  color: #470f7a; }
+
+.buzouno {
+  grid-area: buzouno;
+  transition: .5s ease 0.05s; }
+  .buzouno:hover {
+    transform: scale(1.3); }
+  .buzouno p {
+    text-align: center; }
+  .buzouno img {
+    margin: 10px 10px 10px 10px; }
+
+.buzodos {
+  grid-area: buzodos;
+  transition: .5s ease 0.05s; }
+  .buzodos:hover {
+    transform: scale(1.3); }
+  .buzodos p {
+    text-align: center; }
+  .buzodos img {
+    margin: 10px 10px 10px 10px; }
+
+.buzotres {
+  grid-area: buzotres;
+  transition: .5s ease 0.05s; }
+  .buzotres:hover {
+    transform: scale(1.3); }
+  .buzotres p {
+    text-align: center; }
+  .buzotres img {
+    margin: 10px 10px 10px 10px; }
+
+.buzocuatro {
+  grid-area: buzocuatro;
+  transition: .5s ease 0.05s; }
+  .buzocuatro:hover {
+    transform: scale(1.3); }
+  .buzocuatro p {
+    text-align: center; }
+  .buzocuatro img {
+    margin: 10px 10px 10px 10px; }
+
+.pantalones {
+  grid-area: pantalones;
+  margin-top: 15px;
+  font-size: 20px;
+  padding: 15px;
+  color: #470f7a; }
+
+.pantalonuno {
+  grid-area: pantalonuno;
+  transition: .5s ease 0.05s; }
+  .pantalonuno:hover {
+    transform: scale(1.3); }
+  .pantalonuno p {
+    text-align: center; }
+  .pantalonuno img {
+    margin: 10px 10px 10px 10px; }
+
+.pantalondos {
+  grid-area: pantalondos;
+  transition: .5s ease 0.05s; }
+  .pantalondos:hover {
+    transform: scale(1.3); }
+  .pantalondos p {
+    text-align: center; }
+  .pantalondos img {
+    margin: 10px 10px 10px 10px; }
+
+.pantalontres {
+  grid-area: pantalontres;
+  transition: .5s ease 0.05s; }
+  .pantalontres:hover {
+    transform: scale(1.3); }
+  .pantalontres p {
+    text-align: center; }
+  .pantalontres img {
+    margin: 10px 10px 10px 10px; }
+
+.pantaloncuatro {
+  grid-area: pantaloncuatro;
+  transition: .5s ease 0.05s; }
+  .pantaloncuatro:hover {
+    transform: scale(1.3); }
+  .pantaloncuatro p {
+    text-align: center; }
+  .pantaloncuatro img {
+    margin: 10px 10px 10px 10px; }
+
+.whasap {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  animation-name: whasaptitila;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  text-align: center; }
 
 @keyframes whasaptitila {
   50% {
     opacity: 0.0; }
   100% {
     opacity: 1.0; } }
-    .maindos .whasap .toast-body {
-      color: black;
-      font-weight: bold;
-      text-decoration: none; }
+  .whasap .toast-body {
+    color: black;
+    font-weight: bold;
+    text-decoration: none; }
 
 .maintres {
   display: grid;

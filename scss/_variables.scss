@@ -2,9 +2,11 @@ $color-de-nav: radial-gradient(circle at 49.96% 49.91%, #02ffff 0, #34f5ff 16.67
 $titulos: (
     h2: 40px,
     h3: 30px,
+    h5: 20px,
 );
 $h2: map-get($titulos, h2);
 $h3: map-get($titulos, h3);
+$h5: map-get($titulos, h5);
 @mixin propiedades ($text-align, $font-weight, $font-family, $color) {
     text-align: $text-align;
     font-weight: $font-weight;
