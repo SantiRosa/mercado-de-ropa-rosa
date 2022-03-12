@@ -219,98 +219,107 @@ footer {
     font-size: 25px; }
 
 .buzos {
-  grid-area: buzos;
-  margin-top: 15px;
-  font-size: 20px;
-  padding: 15px;
-  color: #470f7a; }
+  text-align: center;
+  font-weight: bold;
+  font-family: cursive;
+  color: #470f7a;
+  padding: 15px; }
 
 .buzouno {
-  grid-area: buzouno;
   transition: .5s ease 0.05s; }
   .buzouno:hover {
     transform: scale(1.3); }
-  .buzouno p {
+  .buzouno h5 {
+    font-size: 20px;
     text-align: center; }
-  .buzouno img {
-    margin: 10px 10px 10px 10px; }
+  .buzouno p {
+    text-align: center;
+    font-size: 25px; }
 
 .buzodos {
-  grid-area: buzodos;
   transition: .5s ease 0.05s; }
   .buzodos:hover {
     transform: scale(1.3); }
-  .buzodos p {
+  .buzodos h5 {
+    font-size: 20px;
     text-align: center; }
-  .buzodos img {
-    margin: 10px 10px 10px 10px; }
+  .buzodos p {
+    text-align: center;
+    font-size: 25px; }
 
 .buzotres {
-  grid-area: buzotres;
   transition: .5s ease 0.05s; }
   .buzotres:hover {
     transform: scale(1.3); }
-  .buzotres p {
+  .buzotres h5 {
+    font-size: 20px;
     text-align: center; }
-  .buzotres img {
-    margin: 10px 10px 10px 10px; }
+  .buzotres p {
+    text-align: center;
+    font-size: 25px; }
 
 .buzocuatro {
-  grid-area: buzocuatro;
   transition: .5s ease 0.05s; }
   .buzocuatro:hover {
     transform: scale(1.3); }
-  .buzocuatro p {
+  .buzocuatro h5 {
+    font-size: 20px;
     text-align: center; }
-  .buzocuatro img {
-    margin: 10px 10px 10px 10px; }
+  .buzocuatro p {
+    text-align: center;
+    font-size: 25px; }
 
 .pantalones {
-  grid-area: pantalones;
-  margin-top: 15px;
-  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: cursive;
+  color: #470f7a;
   padding: 15px;
-  color: #470f7a; }
+  margin-top: 15px; }
 
 .pantalonuno {
-  grid-area: pantalonuno;
   transition: .5s ease 0.05s; }
   .pantalonuno:hover {
     transform: scale(1.3); }
-  .pantalonuno p {
+  .pantalonuno h5 {
+    font-size: 20px;
     text-align: center; }
-  .pantalonuno img {
-    margin: 10px 10px 10px 10px; }
+  .pantalonuno p {
+    text-align: center;
+    font-size: 25px; }
 
 .pantalondos {
-  grid-area: pantalondos;
   transition: .5s ease 0.05s; }
   .pantalondos:hover {
     transform: scale(1.3); }
-  .pantalondos p {
+  .pantalondos h5 {
+    font-size: 20px;
     text-align: center; }
-  .pantalondos img {
-    margin: 10px 10px 10px 10px; }
+  .pantalondos p {
+    text-align: center;
+    font-size: 25px; }
 
 .pantalontres {
-  grid-area: pantalontres;
   transition: .5s ease 0.05s; }
   .pantalontres:hover {
     transform: scale(1.3); }
-  .pantalontres p {
+  .pantalontres h5 {
+    font-size: 20px;
     text-align: center; }
-  .pantalontres img {
-    margin: 10px 10px 10px 10px; }
+  .pantalontres p {
+    text-align: center;
+    font-size: 25px; }
 
 .pantaloncuatro {
-  grid-area: pantaloncuatro;
   transition: .5s ease 0.05s; }
   .pantaloncuatro:hover {
     transform: scale(1.3); }
-  .pantaloncuatro p {
+  .pantaloncuatro h5 {
+    font-size: 20px;
     text-align: center; }
-  .pantaloncuatro img {
-    margin: 10px 10px 10px 10px; }
+  .pantaloncuatro p {
+    text-align: center;
+    font-size: 25px; }
 
 .whasap {
   position: fixed;
