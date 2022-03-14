@@ -28,7 +28,11 @@ function actualizarStock(stockactualRemeras, compra) {
 //-------------------------BUZOS---------------------------------------//
 
 let stockactualBuzos = 11;
+let stockactualBuzosAzulMarino = 15;
+let stockactualBuzosGris = 25;
 let precioactualBuzos = 3000;
+let precioactualBuzosAzulMarino = 3000;
+let precioactualBuzosGris = 3000;
 let costoenvioBuzos = 500;
 
 function btnBuzos_onclick() {
@@ -36,6 +40,26 @@ function btnBuzos_onclick() {
     if(stockDisponible===true) {
         stockactualBuzos = actualizarStock(stockactualBuzos, 1)
         console.log(`añadido Buzos a ${precioactualBuzos} mas ${costoenvioBuzos} de envío y queda stock ${stockactualBuzos}`);
+    } else{
+        console.log(`No disponible`);
+    }    
+}
+
+function btnBuzos_onclick_azul_marino() {
+    const stockDisponible = validarQuiebre(stockactualBuzosAzulMarino, 1); 
+    if(stockDisponible===true) {
+        stockactualBuzosAzulMarino = actualizarStock(stockactualBuzosAzulMarino, 1)
+        console.log(`añadido Buzos a ${precioactualBuzosAzulMarino} mas ${costoenvioBuzos} de envío y queda stock ${stockactualBuzosAzulMarino}`);
+    } else{
+        console.log(`No disponible`);
+    }    
+}
+
+function btnBuzos_onclick_gris() {
+    const stockDisponible = validarQuiebre(stockactualBuzosGris, 1); 
+    if(stockDisponible===true) {
+        stockactualBuzosGris = actualizarStock(stockactualBuzosGris, 1)
+        console.log(`añadido Buzos a ${precioactualBuzosGris} mas ${costoenvioBuzos} de envío y queda stock ${stockactualBuzosGris}`);
     } else{
         console.log(`No disponible`);
     }    
