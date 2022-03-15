@@ -35,7 +35,7 @@ let precioactualBuzosAzulMarino = 3000;
 let precioactualBuzosGris = 3000;
 let costoenvioBuzos = 500;
 
-function btnBuzos_onclick() {
+function btnBuzos_onclick_blanco() {
     const stockDisponible = validarQuiebre(stockactualBuzos, 1); 
     if(stockDisponible===true) {
         stockactualBuzos = actualizarStock(stockactualBuzos, 1)
@@ -66,17 +66,41 @@ function btnBuzos_onclick_gris() {
 }
 
 //-------------------------PANTALONES---------------------------------------//
+class producto{
+    pedido(stockactualPantalones, precioactualPantalones, costoenvioPantalones)
+}
 
-let stockactualPantalones = 15;
-let precioactualPantalones = 5000;
-let costoenvioPantalones = 500;
+const agregarAlCarrito = (producto) => {
+    carrito.push(producto);
+};
 
-function btnPantalones_onclick() {
+const carrito = [];
+const pantalones = [
+    {id: 1, stockactualPantalones, precioactualPantalones, costoenvioPantalones},
+];
+agregarAlCarrito(pantalones[0]) ;
+console.log(carrito);
+
+function btnPantalones_onclick_Jean() {
     const stockDisponible = validarQuiebre(stockactualPantalones, 1); 
     if(stockDisponible===true) {
-        stockactualPantalones = actualizarStock(stockactualPantalones, 1)
-        console.log(`añadido Pantalones a ${precioactualPantalones} mas ${costoenvioPantalones} de envío y queda stock ${stockactualPantalones}`);
+    stockactualPantalones = actualizarStock(stockactualPantalones, 1)
+    console.log(`añadido Pantalones a ${precioactualPantalones} mas ${costoenvioPantalones} de envío y queda stock ${stockactualPantalones}`);
     } else{
-        console.log(`No disponible`);
-    }    
+    console.log(`No disponible`);
+    }
 }
+
+// let stockactualPantalones = 15;
+// let precioactualPantalones = 5000;
+// let costoenvioPantalones = 500;
+
+// function btnPantalones_onclick() {
+//     const stockDisponible = validarQuiebre(stockactualPantalones, 1); 
+//     if(stockDisponible===true) {
+//         stockactualPantalones = actualizarStock(stockactualPantalones, 1)
+//         console.log(`añadido Pantalones a ${precioactualPantalones} mas ${costoenvioPantalones} de envío y queda stock ${stockactualPantalones}`);
+//     } else{
+//         console.log(`No disponible`);
+//     }    
+// }
