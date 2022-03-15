@@ -66,29 +66,16 @@ function btnBuzos_onclick_gris() {
 }
 
 //-------------------------PANTALONES---------------------------------------//
-class producto{
-    pedido(stockactualPantalones, precioactualPantalones, costoenvioPantalones)
-}
-
-const agregarAlCarrito = (producto) => {
-    carrito.push(producto);
-};
-
 const carrito = [];
-const pantalones = [
-    {id: 1, stockactualPantalones, precioactualPantalones, costoenvioPantalones},
-];
-agregarAlCarrito(pantalones[0]) ;
-console.log(carrito);
 
-function btnPantalones_onclick_Jean() {
-    const stockDisponible = validarQuiebre(stockactualPantalones, 1); 
-    if(stockDisponible===true) {
-    stockactualPantalones = actualizarStock(stockactualPantalones, 1)
-    console.log(`añadido Pantalones a ${precioactualPantalones} mas ${costoenvioPantalones} de envío y queda stock ${stockactualPantalones}`);
-    } else{
-    console.log(`No disponible`);
-    }
+const productos = [
+    {id: 1, titulo: `jean`, precio: 5000},
+    {id: 2, titulo:`jogger`, precio: 5000},
+]
+btnBuzos_onclick_azul_Jean(productos[0]);
+
+function btnBuzos_onclick_azul_Jean(productos) {
+    carrito.push(productos);
 }
 
 // let stockactualPantalones = 15;
