@@ -14,7 +14,7 @@
     <title>Timoteo - Mercado de ropa - Colección</title>
 </head>
 
-<body class="bodydos">
+<body onload="inicializarStock()" class="bodydos">
     <div id="Inicio"></div>
     <header>
         <div class="logo">
@@ -70,7 +70,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Blanca</h5>
                     <p class="card-text">$1.500</p>
-                    <button class="btn btn-outline-success carritouno" onclick="btnRemera_onclick()">Añadir</button>
+                    <button class="btn btn-outline-success carritouno" onclick="btnRemera_onClick('blanca')">Añadir</button>
                   </div>
                 </div>
                 </div>  
@@ -82,7 +82,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Negra</h5>
                     <p class="card-text">$1.500</p>
-                    <button class="btn btn-outline-success carritodos" onclick="">Añadir</button>
+                    <button class="btn btn-outline-success carritodos" onclick="btnRemera_onClick('negra')">Añadir</button>
                   </div>
                 </div>
                 </div>
@@ -94,7 +94,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Azul marino</h5>
                     <p class="card-text">$1.500</p>
-                    <button class="btn btn-outline-success carritotres" onclick="">Añadir</button>
+                    <button class="btn btn-outline-success carritotres" onclick="btnRemera_onClick('azul marino')">Añadir</button>
                   </div>
                 </div>
                 </div>
@@ -106,7 +106,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Gris</h5>
                     <p class="card-text">$1.500</p>
-                    <button class="btn btn-outline-success carritocuatro" onclick="">Añadir</button>
+                    <button class="btn btn-outline-success carritocuatro" onclick="btnRemera_onClick('gris')">Añadir</button>
                   </div>
                 </div>
                 </div>
