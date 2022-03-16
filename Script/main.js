@@ -65,29 +65,38 @@ function btnBuzos_onclick_gris() {
     }    
 }
 
-//-------------------------PANTALONES---------------------------------------//
-const carrito = [];
+//-------------------------PANTALONES---------------------------------------/
+// const producto = {
+//     titulo: `jean`,  
+//     precio: 6000,
+//     categoria: `pantalones`,
+// };
 
-const productos = [
-    {id: 1, titulo: `jean`, precio: 5000},
-    {id: 2, titulo:`jogger`, precio: 5000},
-]
-btnBuzos_onclick_azul_Jean(productos[0]);
+const PRODUCTO = new Producto(`jean`, 6000, `pantalones`);
+const PRODUCTO2 = new Producto2(`gabardina`, 6000, `pantalones`);
+const PRODUCTO3 = new Producto3(`jogger`, 6000, `pantalones`);
 
-function btnBuzos_onclick_azul_Jean(productos) {
-    carrito.push(productos);
+agregarAlCarrito(PRODUCTO);
+agregarAlCarrito(PRODUCTO2);
+agregarAlCarrito(PRODUCTO3);
+//-------------------------declaracion fx constructora---------------------------------------/
+function Producto(titulo, precio, categoria){
+    this.titulo = titulo;
+    this.precio = precio;
+    this.categoria = categoria;
+}
+function Producto2(titulo, precio, categoria){
+    this.titulo = titulo;
+    this.precio = precio;
+    this.categoria = categoria;
+}
+function Producto3(titulo, precio, categoria){
+    this.titulo = titulo;
+    this.precio = precio;
+    this.categoria = categoria;
 }
 
-// let stockactualPantalones = 15;
-// let precioactualPantalones = 5000;
-// let costoenvioPantalones = 500;
-
-// function btnPantalones_onclick() {
-//     const stockDisponible = validarQuiebre(stockactualPantalones, 1); 
-//     if(stockDisponible===true) {
-//         stockactualPantalones = actualizarStock(stockactualPantalones, 1)
-//         console.log(`añadido Pantalones a ${precioactualPantalones} mas ${costoenvioPantalones} de envío y queda stock ${stockactualPantalones}`);
-//     } else{
-//         console.log(`No disponible`);
-//     }    
-// }
+function agregarAlCarrito(producto) {
+    const leyenda = `Añadiste ${producto.titulo} - $ ${producto.precio}`;
+    console.log(leyenda);
+};
