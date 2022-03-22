@@ -41,6 +41,8 @@ function btnRemera_onClick(color) {
     if (remera != undefined){
         reducirStock(remera);
         agregarCarrito(remera);
+        console.log(stockRemeras)
+        console.log(carrito)
     }else{
         alert('No hay mas remeras de color ' + color);
     }
@@ -51,3 +53,13 @@ function totalCarrito(){
     carrito.forEach(element => total+=element.precio);
     return total + COSTO_ENVIO;
 }
+
+function filtrarProducto(){
+    const productoRequerido = document.getElementById("buscador").value.toUpperCase().trim();
+    console.log(productoRequerido);
+
+        const remerasFiltradas = stockRemeras.filter((producto) => {
+        return producto.color.toUpperCase().match(productoRequerido);
+    });
+    console.log(remerasFiltradas);
+}   
