@@ -3,9 +3,10 @@ const COSTO_ENVIO = 500;
 let stockRemeras = [];
 let carrito = [];
 
-class Remera{
+class Producto{
 
-    constructor(color, precio){
+    constructor(categoria, color, precio){
+        this.categoria = categoria;
         this.color = color;
         this.precio = precio;
     }
@@ -13,10 +14,10 @@ class Remera{
 
 function inicializarStock(){
     for(i=0;i<STOCK_INICIAL_REMERAS;i++){
-        stockRemeras.push(new Remera('blanca', 1000));
-        stockRemeras.push(new Remera('gris', 1500));
-        stockRemeras.push(new Remera('negra', 2000));
-        stockRemeras.push(new Remera('azul marino', 1000));
+        stockRemeras.push(new Producto('Remeras','blanca', 1000));
+        stockRemeras.push(new Producto('Buzos', 'gris', 1500));
+        stockRemeras.push(new Producto('Pantalones', 2000));
+        stockRemeras.push(new Producto('azul marino', 1000));
     }
 }
 
