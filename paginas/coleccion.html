@@ -63,30 +63,30 @@
             <h2>Colección</h2>
         </section>
         <section class="remeras">
-            <h3>Remeras lisas</h3>
+            <h3>Productos</h3>
         </section>
         <div class="container">
-            <div class="row"> 
-            <div class="col">
+            <div id="unificadorRemeras" class="row"> 
+            <!-- <div class="col">
                 <div class="remerauno">
                 <div class="card h-100">
                   <img src="../imagenes/remerablanca.jpg" class="card-img-top" alt="Remerauno" width="200" height="150">
                   <div class="card-body">
                     <h5 class="card-title">Blanca</h5>
                     <p class="card-text">$1.500</p>
-                    <button class="btn btn-outline-success carritouno" onclick="btnRemera_onClick('blanca')">Añadir</button>
+                    <button class="btn btn-outline-success carritouno" onclick="btnProducto_onClick('remera','blanca')">Añadir</button>
                   </div>
                 </div>
                 </div>  
-              </div>
-              <div class="col">
+              </div> -->
+              <!-- <div class="col">
                 <div class="remerados">
                 <div class="card h-100">
                   <img src="../imagenes/remeranegra.jpg" class="card-img-top" alt="remerados" width="200" height="150">
                   <div class="card-body">
                     <h5 class="card-title">Negra</h5>
                     <p class="card-text">$1.500</p>
-                    <button class="btn btn-outline-success carritodos" onclick="btnRemera_onClick('negra')">Añadir</button>
+                    <button class="btn btn-outline-success carritodos" onclick="btnProducto_onClick('remera','negra')">Añadir</button>
                   </div>
                 </div>
                 </div>
@@ -98,7 +98,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Azul marino</h5>
                     <p class="card-text">$1.500</p>
-                    <button class="btn btn-outline-success carritotres" onclick="btnRemera_onClick('azul marino')">Añadir</button>
+                    <button class="btn btn-outline-success carritotres" onclick="btnProducto_onClick('remera','azul marino')">Añadir</button>
                   </div>
                 </div>
                 </div>
@@ -110,13 +110,13 @@
                   <div class="card-body">
                     <h5 class="card-title">Gris</h5>
                     <p class="card-text">$1.500</p>
-                    <button class="btn btn-outline-success carritocuatro" onclick="btnRemera_onClick('gris')">Añadir</button>
+                    <button class="btn btn-outline-success carritocuatro" onclick="btnProducto_onClick('remera','gris')">Añadir</button>
                   </div>
                 </div>
                 </div>
               </div>
-            </div>
-        </div>
+            </div>-->
+        <!-- </div> 
         <section class="buzos">
             <h3>Buzos lisos</h3>
         </section>
@@ -129,7 +129,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Blanco</h5>
                     <p class="card-text">$3.000</p>
-                    <button class="btn btn-outline-success buzouno" onclick="btnRemera_onclick_blanco()">Añadir</button>
+                    <button class="btn btn-outline-success buzouno" onclick="btnProducto_onClick('buzo','blanca')">Añadir</button>
                   </div>
                 </div>
                 </div>  
@@ -141,7 +141,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Negro</h5>
                     <p class="card-text">$3.000</p>
-                    <button class="btn btn-outline-success buzodos" onclick="">Añadir</button>
+                    <button class="btn btn-outline-success buzodos" onclick="btnProducto_onClick('buzo', 'negro')">Añadir</button>
                   </div>
                 </div>
                 </div>
@@ -153,7 +153,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Azul marino</h5>
                     <p class="card-text">$3.000</p>
-                    <button class="btn btn-outline-success buzotres" onclick="btnBuzos_onclick_azul_marino()">Añadir</button>
+                    <button class="btn btn-outline-success buzotres" onclick="btnProducto_onClick('buzo','azul marino')">Añadir</button>
                   </div>
                 </div>
                 </div>
@@ -165,7 +165,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Gris</h5>
                     <p class="card-text">$3.000</p>
-                    <button class="btn btn-outline-success buzocuatro" onclick="btnBuzos_onclick_gris()">Añadir</button>
+                    <button class="btn btn-outline-success buzocuatro" onclick="btnProducto_onClick('buzo','gris')">Añadir</button>
                   </div>
                 </div>
                 </div>
@@ -184,7 +184,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Jean clásico</h5>
                     <p class="card-text">$6.000</p>
-                    <button class="btn btn-outline-success pantalonuno" onclick="btnRemera_onclick_Jean()">Añadir</button>
+                    <button class="btn btn-outline-success pantalonuno" onclick="btnProducto_onClick('pantalon', 'jean')">Añadir</button>
                   </div>
                 </div>
                 </div>  
@@ -196,7 +196,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Gabardina</h5>
                     <p class="card-text">$5.000</p>
-                    <button class="btn btn-outline-success pantalondos" onclick="">Añadir</button>
+                    <button class="btn btn-outline-success pantalondos" onclick="btnProducto_onClick('pantalon', 'gabardina')">Añadir</button>
                   </div>
                 </div>
                 </div>
@@ -208,7 +208,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Jogger</h5>
                     <p class="card-text">$5.000</p>
-                    <button class="btn btn-outline-success pantalontres" onclick="">Añadir</button>
+                    <button class="btn btn-outline-success pantalontres" onclick="btnProducto_onClick('pantalon', 'jogger')">Añadir</button>
                   </div>
                 </div>
                 </div>
@@ -220,11 +220,11 @@
                   <div class="card-body">
                     <h5 class="card-title">Gris</h5>
                     <p class="card-text">$5.000</p>
-                    <button class="btn btn-outline-success pantaloncuatro" onclick="">Añadir</button>
+                    <button class="btn btn-outline-success pantaloncuatro" onclick="btnProducto_onClick('pantalon', 'jeannegro')">Añadir</button>
                   </div>
                 </div>
                 </div>
-              </div>
+              </div> -->
             </div>
         </div>
         <section>
