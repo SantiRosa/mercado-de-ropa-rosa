@@ -1,12 +1,6 @@
-const agregarAlCarrito = (producto) => {
-    let productocarrito;
-    productocarrito = producto;
-    carrito.push(productocarrito);
-};
+let carrito = [];
 
-const carrito = [];
-
-const productos = [
+let productos = [
     { id: 1, titulo: "Remera Blanca", precio: 1000, stock: 0, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/remerablanca.jpg"},
     { id: 2, titulo: "Remera Negra", precio: 1000, stock: 15, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/remeranegra.jpg" },     
     { id: 3, titulo: "Remera Gris", precio: 1000, stock: 5, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/remeragris.jpg" },
@@ -17,27 +11,23 @@ const productos = [
     { id: 8, titulo: "Buzo Azul", precio: 3000, stok: 0, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/buzoazulmarino.jpg" },
 ]
 
-generarCards(productos);
+const agregarAlCarrito = (producto) => {
+    existeEnCarrito(producto) ? actualizarProducto(producto) : (
+        actualizarProducto(producto),
+        carrito = [...carrito, producto]
+    );
+};
 
-function generarCards(productosAmostrar){
-    let acumuladorDeCards = ``;
-    productosAmostrar.forEach(productos => {
-        acumuladorDeCards += `<div class="col-3">
-        <div class="remerauno">
-        <div class="card h-100">
-        <div class="badge bg-dark position absolute" top: 0.1rem>${productos.stock > 0 ? "Disponible" : "Sin Stock"}</div>
-          <img src=${productos.imagen} class="card-img-top" alt="Remerauno" width="200" height="150">
-          <div class="card-body">
-            <h5 class="card-title">${productos.titulo}</h5>
-            <p class="card-text">${productos.precio}</p>
-            <button class="btn btn-outline-success carritouno" onclick="btnCompra_onClick('${productos.titulo}')">Añadir</button>
-          </div>
-        </div>
-        </div>  
-      </div>`;
-    });
-    mostrarCardsEnElhtml(acumuladorDeCards);
+const actualizarProducto = (producto) =>{
+    let {cantidadComprada, stock, subtotalCompra} = producto;
+    cantidadComprada+=1;
+    stock -=1; 
+    subtotalCompra = cantidadComprada * producto.precio;
+    producto.cantidadComprada = cantidadComprada;
+    producto.stock = stock;
+    producto.subtotalCompra = subtotalCompra;
 }
+
 function mostrarCardsEnElhtml(cards) {
     document.getElementById("creadorCards").innerHTML = cards;
 }
@@ -53,65 +43,48 @@ function filtrarProducto() {
     generarCards(remerasFiltradas);
 }
 
-function btnCompra_onClick(producto) {
-    let elemento = encontrarProducto(producto);
-    let existencias = validarStock(elemento);
-    if(existencias == true){
-        let hayEnCarrito = existeEnCarrito(elemento);
-        if(hayEnCarrito == true){
-            let elementoEnCarrito = encontrarProductoEnCarrito(producto);
-            elementoEnCarrito.cantidadComprada = elementoEnCarrito.cantidadComprada + 1;
-            elemento.stock = elemento.stock - 1;
-            elementoEnCarrito.subtotalCompra = elementoEnCarrito.cantidadComprada * elementoEnCarrito.precio;
-        }
-        else{
-            agregarAlCarrito(elemento);
-            let elementoEnCarrito = encontrarProductoEnCarrito(producto);
-            elementoEnCarrito.cantidadComprada = elementoEnCarrito.cantidadComprada + 1;
-            elemento.stock = elemento.stock - 1;
-            elementoEnCarrito.subtotalCompra = elementoEnCarrito.cantidadComprada * elementoEnCarrito.precio;
-        }
-    }
-    else {
+function encontrarProductoPorId(id) {
+    return productos.find(element => element.id === parseInt(id));
+}
+
+function validarStock(producto) {
+    return producto.stock > 0;
+}
+
+function existeEnCarrito(producto) {
+    return carrito.find(element => element.id === producto.id);
+}
+
+function btnCompra_onClick(id) {
+    const producto = encontrarProductoPorId(id);
+    if(validarStock(producto)){
+        agregarAlCarrito(producto);
     }
 }
 
-function encontrarProducto(productoTitulo) {
-    let productoEncontrado;
-    productos.forEach(productoSeleccionado => {
-        if(productoTitulo == productoSeleccionado.titulo){
-            productoEncontrado = productoSeleccionado;
-        }
+function generarCards(productosAmostrar){
+    let acumuladorDeCards = ``;
+    productosAmostrar.forEach(producto => {
+        acumuladorDeCards += `<div class="col-3">
+        <div class="remerauno">
+        <div class="card h-100">
+        <div class="badge bg-dark position absolute" top: 0.1rem>${producto.stock > 0 ? "Disponible" : "Sin Stock"}</div>
+          <img src=${producto.imagen} class="card-img-top" alt="Remerauno" width="200" height="150">
+          <div class="card-body">
+            <h5 class="card-title">${producto.titulo}</h5>
+            <p class="card-text">${producto.precio}</p>
+            <button class="btn btn-outline-success carritouno" onclick="btnCompra_onClick('${producto.id}')">Añadir</button>
+          </div>
+        </div>
+        </div>  
+      </div>`;
     });
-    return productoEncontrado;
+    mostrarCardsEnElhtml(acumuladorDeCards);
 }
 
-function encontrarProductoEnCarrito(productoTitulo) {
-    let productoEncontrado;
-    carrito.forEach(productoSeleccionado => {
-        if(productoTitulo == productoSeleccionado.titulo){
-            productoEncontrado = productoSeleccionado;
-        }
-    });
-    return productoEncontrado;
-}
+generarCards(productos);
 
-
-function validarStock(productoEncontrado) {
-    if (productoEncontrado.stock > 0) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-
-function existeEnCarrito(productoClick) {
-    let existeEnCarro = false;
-    carrito.forEach(productoEnCarro => {
-        if(productoClick.titulo == productoEnCarro.titulo){
-            existeEnCarro = true;
-        }
-    });
-    return existeEnCarro;
+function sarasa(){
+    let array = [1,2,3,4];
+    let arrayClone = [...array, 5];
 }
