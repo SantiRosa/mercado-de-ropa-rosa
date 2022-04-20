@@ -321,6 +321,9 @@ footer {
     text-align: center;
     font-size: 25px; }
 
+.botonDolar {
+  text-align: center; }
+
 .whasap {
   position: fixed;
   bottom: 10px;

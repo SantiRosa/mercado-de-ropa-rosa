@@ -1,5 +1,8 @@
 let carrito = [];
 
+// variable global para saber si esta el producto en pesos o en dls
+let esDolar = false;
+
 let productos = [
     { id: 1, titulo: "Remera Blanca", precio: 1000, stock: 0, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/remerablanca.jpg"},
     { id: 2, titulo: "Remera Negra", precio: 1000, stock: 15, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/remeranegra.jpg" },     
@@ -85,23 +88,44 @@ function btnCompra_onClick(id) {
 }
 
 function generarCards(productosAmostrar){
-    let acumuladorDeCards = ``;
-    productosAmostrar.forEach(producto => {
-        acumuladorDeCards += `<div class="col-3">
-        <div class="remerauno">
-        <div class="card h-100">
-        <div class="badge bg-dark position absolute" top: 0.1rem>${producto.stock > 0 ? "Disponible" : "Sin Stock"}</div>
-          <img src=${producto.imagen} class="card-img-top" alt="Remerauno" width="200" height="150">
-          <div class="card-body">
-            <h5 class="card-title">${producto.titulo}</h5>
-            <p class="card-text">${producto.precio}</p>
-            <button class="btn btn-outline-success carritouno" onclick="btnCompra_onClick('${producto.id}')">Añadir</button>
-          </div>
-        </div>
-        </div>  
-      </div>`;
-    });
-    mostrarCardsEnElhtml(acumuladorDeCards);
+    if (esDolar == false){
+        let acumuladorDeCards = ``;
+        productosAmostrar.forEach(producto => {
+            acumuladorDeCards += `<div class="col-3">
+            <div class="remerauno">
+            <div class="card h-100">
+            <div class="badge bg-dark position absolute" top: 0.1rem>${producto.stock > 0 ? "Disponible" : "Sin Stock"}</div>
+            <img src=${producto.imagen} class="card-img-top" alt="Remerauno" width="200" height="150">
+            <div class="card-body">
+                <h5 class="card-title">${producto.titulo}</h5>
+                <p class="card-text">$  ${producto.precio}</p>
+                <button class="btn btn-outline-success carritouno" onclick="btnCompra_onClick('${producto.id}')">Añadir</button>
+            </div>
+            </div>
+            </div>  
+        </div>`;
+        });
+        mostrarCardsEnElhtml(acumuladorDeCards);
+    }
+    else{
+        let acumuladorDeCards = ``;
+        productosAmostrar.forEach(producto => {
+            acumuladorDeCards += `<div class="col-3">
+            <div class="remerauno">
+            <div class="card h-100">
+            <div class="badge bg-dark position absolute" top: 0.1rem>${producto.stock > 0 ? "Disponible" : "Sin Stock"}</div>
+            <img src=${producto.imagen} class="card-img-top" alt="Remerauno" width="200" height="150">
+            <div class="card-body">
+                <h5 class="card-title">${producto.titulo}</h5>
+                <p class="card-text">USD  ${producto.precio}</p>
+                <button class="btn btn-outline-success carritouno" onclick="btnCompra_onClick('${producto.id}')">Añadir</button>
+            </div>
+            </div>
+            </div>  
+        </div>`;
+        });
+        mostrarCardsEnElhtml(acumuladorDeCards);
+    }
 }
 
 generarCards(productos);
@@ -110,3 +134,34 @@ function sarasa(){
     let array = [1,2,3,4];
     let arrayClone = [...array, 5];
 }
+
+//api-dolar-argentina.herokuapp.com/api/dolaroficial
+function btnCompra_onDolar(){
+    fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")//, { mode: 'no-cors'})
+    .then((response) => response.json())
+    .then((data) => MyFunction(data))
+}
+
+function MyFunction(arrayWebDolar){
+    let tipoCambio;
+    arrayWebDolar.forEach((MyPrecioDolar) => {
+        if (MyPrecioDolar.casa.nombre == 'Dolar Oficial'){
+            tipoCambio = parseFloat(MyPrecioDolar.casa.venta);
+        }
+    });
+    if (esDolar == false){
+        productos.forEach((producto) => {
+            producto.precio = parseFloat(producto.precio/tipoCambio).toFixed(2);
+        })
+        esDolar = true;
+    }
+    else
+    {
+        productos.forEach((producto) => {
+            producto.precio = parseFloat(producto.precio*tipoCambio).toFixed(0);
+        })
+        esDolar = false;
+    }
+    generarCards(productos);
+}
+
