@@ -49,6 +49,25 @@ function generarLista(carrito){
     mostrarCardsEnElhtml(acumuladorDeCards);
 }
 
+function generarListaVacia(){
+    let acumuladorDeCards = ``;
+    acumuladorDeCards += `<li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">TOTAL COMPRA: $ 0</div>
+    </div>
+    <span class="badge bg-primary rounded-pill">Carrito Vacio</span>
+  </li>`
+    mostrarCardsEnElhtml(acumuladorDeCards);
+}
+
 function mostrarCardsEnElhtml(cards) {
     document.getElementById("creadorCardsCarrito").innerHTML = cards;
+}
+
+
+function btnVaciar_Carrito(){
+    localStorage.clear("carrito");
+    carrito = [];
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    generarListaVacia();
 }

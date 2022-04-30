@@ -11,7 +11,7 @@ let productos = [
     { id: 4, titulo: "Remera Azul", precio: 1000, stock: 5, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/remeraazulmarino.jpg" },
     { id: 5, titulo: "Buzo Blanco", precio: 3000, stock: 8, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/buzoblanco.jpg" },
     { id: 6, titulo: "Buzo Gris", precio: 3000, stock: 9, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/buzogris.jpg" },
-    { id: 7, titulo: "Buzo Negro", precio: 3000, stok: 5, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/buzonegro.jpg" },
+    { id: 7, titulo: "Buzo Negro", precio: 3000, stock: 5, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/buzonegro.jpg" },
     { id: 8, titulo: "Buzo Azul", precio: 3000, stok: 0, cantidadComprada: 0, subtotalCompra: 0, imagen: "../imagenes/buzoazulmarino.jpg" },
 ]
 
@@ -43,7 +43,7 @@ function filtrarProducto() {
     const remerasFiltradas = productos.filter((producto) => {
         return producto.titulo.toUpperCase().match(productoRequerido);
     });
-
+    
     generarCards(remerasFiltradas);
 }
 
@@ -56,7 +56,13 @@ function validarStock(producto) {
 }
 
 function existeEnCarrito(producto) {
-    return carrito.find(element => element.id === producto.id);
+    if (carrito != null){
+        return carrito.find(element => element.id === producto.id);
+    }
+    else{
+        return false;
+    }
+    
 }
 
 function btnCompra_onClick(id) {
@@ -136,6 +142,16 @@ function generarCards(productosAmostrar){
     }
 }
 
+carrito = JSON.parse(localStorage.getItem("carrito"));
+if (carrito == null){
+    carrito = [];
+    cantidadEnCarrito = 0;
+}
+else{
+    cantidadEnCarrito = notificacion(carrito);
+}
+
+document.getElementById("cantidadActualCarrito").innerHTML = cantidadEnCarrito;
 generarCards(productos);
 
 
@@ -176,8 +192,14 @@ function MyFunction(arrayWebDolar){
 
 function notificacion(carritoActual){
     let cantidadTotal = 0;
-    carritoActual.forEach((elementoEnCarrito) => {
-        cantidadTotal += elementoEnCarrito.cantidadComprada;
-    })
+    if (carritoActual != null){
+        carritoActual.forEach((elementoEnCarrito) => {
+            cantidadTotal += elementoEnCarrito.cantidadComprada;
+        });
+    }
+    else{
+        ;
+    }
+    
     return cantidadTotal;
 }
